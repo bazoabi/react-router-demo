@@ -13,12 +13,16 @@ export default function PostDetails() {
 
   console.log("the targeted post is: ", post);
 
-  return (
+  return post ? (
     <>
       <h1>Post Details Page</h1>
       <h1>{post.title}</h1>
 
       <h4>{post.body}</h4>
+    </>
+  ) : (
+    <>
+      <h1>Did not find post with id {postId}</h1>
     </>
   );
 }
