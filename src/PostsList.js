@@ -6,7 +6,7 @@ export default function PostsList() {
   const posts = useContext(postsContext);
   const postsListRenderer = posts.map((post) => {
     return (
-      <Link key={post.id} to={`/postDetails/${post.id}`}>
+      <Link key={post.id} to={`/posts/${post.id}`}>
         <div style={{ background: "orange", padding: "1vh", margin: "3vh" }}>
           <h1>{post.title}</h1>
           <hr />
