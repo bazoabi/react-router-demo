@@ -6,6 +6,7 @@ import PostsList from "./PostsList";
 import PostDetails from "./PostDetails";
 import { postsContext } from "./contexts/postsContext";
 import { Posts } from "./data/posts";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" element={<h1>This is homepage</h1>} />
           <Route path="/home" element={<h1>This is homepage</h1>} />
           <Route path="/postDetails/:postId" element={<PostDetails />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </postsContext.Provider>
